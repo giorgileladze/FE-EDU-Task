@@ -1,0 +1,25 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <container name="header.banner" htmlTag="div" after="-" htmlClass="header-banner">
+                <block class="Magento\Framework\View\Element\Template" name="header.banner.free-shipping"
+                       template="Magento_Theme::html/header/banner.phtml"
+                       ifconfig="carriers/freeshipping/active">
+                    <arguments>
+                        <argument name="css" xsi:type="string">Namespace_Module::css/source/banner.css</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.jpg</argument>
+                <argument name="logo_width" xsi:type="number">100</argument>
+                <argument name="logo_height" xsi:type="number">100</argument>
+                <argument name="logo_alt" xsi:type="string">My Logo</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
